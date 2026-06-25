@@ -750,6 +750,10 @@
             <label for="email">Correo electrónico</label>
             <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
           </div>
+          <div class="field">
+            <label for="phone">Teléfono (WhatsApp)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+52 322 000 0000" autocomplete="tel">
+          </div>
 
           <button class="submit-btn" id="submitBtn" onclick="handleSubmit(event)">
             Obtener mi Análisis de Oportunidades 2026
@@ -797,10 +801,26 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
+// 🔧 Cambia esta URL por la de producción cuando despliegues el backend (Deploy).
+const BACKEND_URL = "https://93edcd2e-65f2-4611-bd38-337db65e6c6f.preview.emergentagent.com";
+
+function getUTM() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    utm_source:   p.get("utm_source"),
+    utm_medium:   p.get("utm_medium"),
+    utm_campaign: p.get("utm_campaign"),
+    utm_term:     p.get("utm_term"),
+    utm_content:  p.get("utm_content"),
+  };
+}
+
+async function handleSubmit(e) {
   e.preventDefault();
-  const name = document.getElementById('name').value.trim();
+  const name  = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
+  const phoneEl = document.getElementById('phone');
+  const phone = phoneEl ? phoneEl.value.trim() : "";
 
   if (!name) {
     alert('Por favor ingresa tu nombre completo.');
@@ -815,11 +835,27 @@ function handleSubmit(e) {
   btn.disabled = true;
   btn.textContent = 'Procesando...';
 
-  // Simulate brief loading state, then show success
-  setTimeout(() => {
+  try {
+    const res = await fetch(`${BACKEND_URL}/api/leads`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone || null,
+        utm: getUTM(),
+        referrer: document.referrer || null,
+        page_url: window.location.href
+      })
+    });
+    if (!res.ok) throw new Error('Registro fallido');
     document.getElementById('formContainer').style.display = 'none';
     document.getElementById('successState').style.display = 'block';
-  }, 800);
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Obtener mi Análisis de Oportunidades 2026';
+    alert('Hubo un problema al registrar tus datos. Inténtalo de nuevo en unos segundos.');
+  }
 }
 
 // Smooth scroll for CTA button
