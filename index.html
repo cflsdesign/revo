@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayulita 2026: La Nueva Era de la Certeza Inmobiliaria — Revo México</title>
+<link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #000000;
+    --turquoise: #34D4E7;
+    --turquoise-dim: rgba(52, 212, 231, 0.12);
+    --turquoise-glow: rgba(52, 212, 231, 0.25);
+    --white: #FFFFFF;
+    --gray-900: #0a0a0a;
+    --gray-800: #111111;
+    --gray-700: #1a1a1a;
+    --gray-600: #2a2a2a;
+    --gray-400: #666666;
+    --gray-300: #888888;
+    --gray-200: #aaaaaa;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Reddit Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ─── GRID OVERLAY ─── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(52,212,231,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(52,212,231,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 5vw 60px;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52,212,231,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo {
+    position: absolute;
+    top: 36px;
+    left: 5vw;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .logo svg { width: 44px; height: 44px; }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--turquoise);
+    margin-bottom: 28px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--turquoise);
+  }
+
+  .hero-title {
+    font-size: clamp(36px, 6vw, 68px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    color: var(--turquoise);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 300;
+    color: var(--gray-200);
+    max-width: 620px;
+    line-height: 1.7;
+    margin-bottom: 48px;
+  }
+
+  /* ─── STAT STRIP ─── */
+  .stat-strip {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--gray-600);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 48px;
+    max-width: 600px;
+  }
+
+  .stat-item {
+    flex: 1;
+    padding: 20px 24px;
+    border-right: 1px solid var(--gray-600);
+    background: var(--gray-800);
+  }
+
+  .stat-item:last-child { border-right: none; }
+
+  .stat-number {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--turquoise);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--turquoise);
+    color: var(--black);
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 18px 32px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .cta-primary:hover {
+    background: #5ae0ef;
+    transform: translateY(-1px);
+  }
+
+  .cta-primary svg { width: 16px; height: 16px; }
+
+  /* ─── REASONS SECTION ─── */
+  .section {
+    position: relative;
+    z-index: 2;
+    padding: 100px 5vw;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--turquoise);
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin-bottom: 60px;
+    max-width: 540px;
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1px;
+    background: var(--gray-600);
+    border: 1px solid var(--gray-600);
+  }
+
+  .reason-card {
+    background: var(--gray-900);
+    padding: 36px 32px;
+    position: relative;
+    transition: background 0.2s;
+  }
+
+  .reason-card:hover { background: var(--gray-800); }
+
+  .reason-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--turquoise);
+    transition: height 0.3s ease;
+  }
+
+  .reason-card:hover::before { height: 100%; }
+
+  .reason-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--turquoise-dim);
+    border: 1px solid rgba(52,212,231,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .reason-icon svg { width: 18px; height: 18px; stroke: var(--turquoise); fill: none; stroke-width: 1.5; }
+
+  .reason-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .reason-text {
+    font-size: 14px;
+    color: var(--gray-200);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .reason-text strong {
+    color: var(--turquoise);
+    font-weight: 600;
+  }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gray-600) 20%, var(--gray-600) 80%, transparent);
+    margin: 0 5vw;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─── QUOTE BAND ─── */
+  .quote-band {
+    position: relative;
+    z-index: 2;
+    padding: 80px 5vw;
+    background: var(--gray-800);
+    border-top: 1px solid var(--gray-600);
+    border-bottom: 1px solid var(--gray-600);
+    text-align: center;
+  }
+
+  .quote-text {
+    font-size: clamp(20px, 3.5vw, 32px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    max-width: 800px;
+    margin: 0 auto 16px;
+  }
+
+  .quote-text em {
+    font-style: normal;
+    color: var(--turquoise);
+  }
+
+  .quote-attr {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gray-400);
+    font-weight: 500;
+  }
+
+  /* ─── FORM SECTION ─── */
+  .form-section {
+    position: relative;
+    z-index: 2;
+    padding: 100px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .form-left .section-title { margin-bottom: 20px; }
+
+  .form-lead {
+    font-size: 15px;
+    color: var(--gray-200);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 36px;
+  }
+
+  .form-trust {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--gray-300);
+  }
+
+  .trust-item svg { width: 14px; height: 14px; stroke: var(--turquoise); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+  .form-box {
+    background: var(--gray-800);
+    border: 1px solid var(--gray-600);
+    padding: 48px 40px;
+    position: relative;
+  }
+
+  .form-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--turquoise);
+  }
+
+  .form-box-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .form-box-sub {
+    font-size: 13px;
+    color: var(--gray-300);
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+
+  .field {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-300);
+    margin-bottom: 8px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    background: var(--gray-700);
+    border: 1px solid var(--gray-600);
+    color: var(--white);
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    border-color: var(--turquoise);
+  }
+
+  input::placeholder { color: var(--gray-400); }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--turquoise);
+    color: var(--black);
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .submit-btn:hover {
+    background: #5ae0ef;
+    transform: translateY(-1px);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .submit-btn svg { width: 16px; height: 16px; }
+
+  .privacy-note {
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--gray-400);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* ─── SUCCESS STATE ─── */
+  .success-state {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .success-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--turquoise-dim);
+    border: 1px solid rgba(52,212,231,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  .success-icon svg { width: 24px; height: 24px; stroke: var(--turquoise); fill: none; stroke-width: 2; }
+
+  .success-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .success-text {
+    font-size: 14px;
+    color: var(--gray-200);
+    font-weight: 300;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--turquoise);
+    color: var(--black);
+    font-family: 'Reddit Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 16px 28px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .download-btn:hover { background: #5ae0ef; }
+  .download-btn svg { width: 16px; height: 16px; }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    position: relative;
+    z-index: 2;
+    border-top: 1px solid var(--gray-600);
+    padding: 36px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-logo svg { width: 32px; height: 32px; }
+  .footer-logo span { font-size: 16px; font-weight: 700; color: var(--white); }
+
+  .footer-text {
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+
+  .footer-contact {
+    font-size: 12px;
+    color: var(--gray-300);
+    text-align: right;
+  }
+
+  .footer-contact a {
+    color: var(--turquoise);
+    text-decoration: none;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .form-section {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      padding: 60px 5vw;
+    }
+    .stat-strip { flex-wrap: wrap; }
+    .stat-item { min-width: 120px; }
+    .footer { flex-direction: column; text-align: center; }
+    .footer-contact { text-align: center; }
+  }
+
+  @media (max-width: 560px) {
+    .form-box { padding: 32px 24px; }
+    .hero { padding: 100px 5vw 60px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Logo -->
+  <div class="logo">
+    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 22C8 14.268 14.268 8 22 8" stroke="#34D4E7" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M8 22C8 29.732 14.268 36 22 36" stroke="#34D4E7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+      <text x="18" y="27" font-family="Reddit Sans, sans-serif" font-size="13" font-weight="700" fill="white">Revo</text>
+    </svg>
+    <span class="logo-text">Revo México</span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="eyebrow">Análisis Exclusivo · Riviera Nayarit 2026</div>
+
+    <h1 class="hero-title">
+      Sayulita 2026:<br>
+      La Nueva Era de la<br>
+      <em>Certeza Inmobiliaria</em>
+    </h1>
+
+    <p class="hero-subtitle">
+      No navegues a ciegas en un mercado con 419% de crecimiento de inventario. Descarga nuestro análisis exclusivo y descubre cómo capitalizar la "Fuga hacia la Certidumbre" en la Riviera Nayarit.
+    </p>
+
+    <div class="stat-strip">
+      <div class="stat-item">
+        <div class="stat-number">+419%</div>
+        <div class="stat-label">Crecimiento de inventario 2022–2025</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">69.35%</div>
+        <div class="stat-label">Condominios vendidos en pre-venta</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">75.1%</div>
+        <div class="stat-label">Ventas en el epicentro de liquidez</div>
+      </div>
+    </div>
+
+    <a href="#form" class="cta-primary">
+      Obtener mi Análisis de Oportunidades 2026
+      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v9M4 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REASONS SECTION -->
+<section class="section">
+  <div class="section-label">Contenido del Reporte</div>
+  <h2 class="section-title">¿Por qué necesitas este reporte ahora?</h2>
+
+  <div class="reasons-grid">
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="reason-title">La Paradoja de la Pre-Venta</div>
+      <p class="reason-text">Por qué el <strong>69.35% de los condominios</strong> se venden antes de terminarse, mientras que las casas de alta gama pasan un promedio de <strong>670 días</strong> estancadas en el mercado.</p>
+    </div>
+
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="reason-title">El Declive de los Lotes</div>
+      <p class="reason-text">Entiende por qué las ventas de terrenos han caído del <strong>23% al 8%</strong> y por qué los compradores hoy huyen del riesgo de construcción independiente en este nuevo mercado.</p>
+    </div>
+
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="reason-title">Puntos Dulces de Inversión</div>
+      <p class="reason-text">Identificamos el "Epicentro de la Liquidez" donde se concreta el <strong>75.1% de las ventas exitosas</strong> de casas — y el umbral de precio exacto donde la demanda colapsa.</p>
+    </div>
+
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 3h7l1 3-3 2a11 11 0 006 6l2-3 3 1v7a1 1 0 01-1 1C8 20 4 8 4 4a1 1 0 011-1z"/></svg>
+      </div>
+      <div class="reason-title">Catalizadores 2026</div>
+      <p class="reason-text">El impacto real de la <strong>expansión del Aeropuerto de Puerto Vallarta</strong> y la nueva autopista GDL-PV en la plusvalía de tu activo — con datos desde enero 2026.</p>
+    </div>
+
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="reason-title">El Antídoto a la Incertidumbre</div>
+      <p class="reason-text">La <strong>Metodología Revo</strong>: control absoluto de capital y ciencia bioclimática perfeccionados durante <strong>30 años</strong> para garantizar la viabilidad financiera de cada proyecto.</p>
+    </div>
+
+    <div class="reason-card">
+      <div class="reason-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="reason-title">Inteligencia del Mercado 4:1</div>
+      <p class="reason-text">Con una proporción comprador-vendedor de <strong>4.1:1</strong>, entender las reglas del nuevo mercado ya no es ventaja competitiva — es requisito de supervivencia para el inversor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <p class="quote-text">
+    "El mercado exige <em>certidumbre financiera.</em><br>
+    La costa exige <em>belleza arquitectónica.</em><br>
+    Es el momento de la evolución."
+  </p>
+  <p class="quote-attr">— Revo México · Sayulita 2026 Strategic Vision</p>
+</div>
+
+<!-- FORM SECTION -->
+<section class="section" id="form">
+  <div class="form-section">
+    <div class="form-left">
+      <div class="section-label">Acceso Inmediato</div>
+      <h2 class="section-title">Descarga el análisis completo</h2>
+      <p class="form-lead">
+        Este informe es el resultado de analizar <strong>44 ventas comparables</strong>, cuatro años de datos de mercado y la inteligencia de campo del equipo Revo México. Es gratuito. Es exclusivo. Y puede cambiar tu decisión de inversión.
+      </p>
+      <div class="form-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Descarga inmediata tras registro
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Sin spam. Tu información está segura
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Análisis exclusivo basado en datos reales 2022–2026
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          30 años de experiencia en el mercado mexicano
+        </div>
+      </div>
+    </div>
+
+    <div class="form-right">
+      <div class="form-box">
+        <h3 class="form-box-title">Accede al Reporte Gratuito</h3>
+        <p class="form-box-sub">Ingresa tus datos y descarga al instante.</p>
+
+        <div id="formContainer">
+          <div class="field">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" required>
+          </div>
+
+          <button class="submit-btn" id="submitBtn" onclick="handleSubmit(event)">
+            Obtener mi Análisis de Oportunidades 2026
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v9M4 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+
+          <p class="privacy-note">
+            Al registrarte aceptas recibir información de Revo México.<br>
+            Respetamos tu privacidad. Sin spam, nunca.
+          </p>
+        </div>
+
+        <div class="success-state" id="successState">
+          <div class="success-icon">
+            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 class="success-title">¡Tu reporte está listo!</h4>
+          <p class="success-text">Gracias por tu interés en el mercado de Sayulita. Haz clic abajo para descargar tu análisis exclusivo.</p>
+          <a href="Sayulita_2026_Revo_Mexico.pdf" download="Sayulita_2026_Revo_Mexico.pdf" class="download-btn">
+            Descargar Análisis 2026
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 2v9M4 8l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="privacy-note" style="margin-top:20px;">Un asesor de Revo México se pondrá en contacto contigo pronto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">
+    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+      <path d="M8 22C8 14.268 14.268 8 22 8" stroke="#34D4E7" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M8 22C8 29.732 14.268 36 22 36" stroke="#34D4E7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="2 3"/>
+      <text x="18" y="27" font-family="Reddit Sans, sans-serif" font-size="13" font-weight="700" fill="white">Revo</text>
+    </svg>
+    <span>Revo México</span>
+  </div>
+  <p class="footer-text">© 2026 Revo México. Todos los derechos reservados.</p>
+  <div class="footer-contact">
+    <a href="mailto:axel.olaf@revo.com.mx">axel.olaf@revo.com.mx</a><br>
+    +52 1 322 728 4435
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  if (!name) {
+    alert('Por favor ingresa tu nombre completo.');
+    return;
+  }
+  if (!email || !email.includes('@')) {
+    alert('Por favor ingresa un correo electrónico válido.');
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Procesando...';
+
+  // Simulate brief loading state, then show success
+  setTimeout(() => {
+    document.getElementById('formContainer').style.display = 'none';
+    document.getElementById('successState').style.display = 'block';
+  }, 800);
+}
+
+// Smooth scroll for CTA button
+document.querySelector('.cta-primary').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
